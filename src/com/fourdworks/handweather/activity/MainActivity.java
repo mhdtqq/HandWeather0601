@@ -23,8 +23,9 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.activity_main);
-
+		
 		// 一、初始化控件
 		mSlidingMenu = (SlidingMenu) findViewById(R.id.mSlidingMenu);
 
