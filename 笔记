@@ -5,3 +5,67 @@
   1.构成:大小写字母，数字（不能放在标识符开头），_,$,汉子（不推荐）
   2.标识符不能是关键字
   3.标识符长度不限制 
+
+  
+  
+3.BaseActivity(基础Activity)的设计
+//-----------------------------
+3.1使用：让子Activity全部继承BaseActivity
+3.2目的：
+     //-------------------
+     a.约束子Actitivty的编码行为
+     b.提供与Activists相关的常用工具方法，可以让子类调用，而不需要重复编写  
+
+
+ 
+ 
+3.3Activity通常做什么事情？
+   //第一类
+   1.设置界面(layout/xml)(构造)
+   2.初始化控件(initView)
+   3.初始化数据(InitData)
+   4.数据与控件产生关系 (bindView)
+   //第二类(将一些常用的方法，在BaseActiviy中定义,不同在每一个子Activity中去定义)
+   1.页面跳转
+     //----------------Intent----------------
+     1.直接从当前Activity跳到其它Activity
+     2.直接从当前Activity跳到其它Activity,传递数据
+     3.从当前Activity跳到其它Activity,并且需要回调
+     4.从当前Activity跳到其它Activity,传递数据，并且需要回调
+     //--------------------------------
+   
+  
+   
+   
+   
+   
+3.4如何搭建BaseActivity
+  //1.用构造函数将本页面的布局传到BaseActivity里面去
+  //2.将BaseActivity中定义成抽象类，定义   initView，InitData，bindView三个构造函数
+  
+  
+  
+4 程序退出
+  4.1分析
+  //1.把所有的Activity都保存起来（堆栈）
+  //2.
+  4.2双击退出应用程序
+    1.拦截返回按键的单击事件
+    2.具体实现 
+	    appExitTime = 2
+	    lastTime = 0;
+	            判断本次点击距离上一次单击是不是小于2S(123545121212-lastTime<appExitTime)
+	    true:退出
+	    false:lastTime = 123545121212,提示
+	    
+	
+  	
+  	
+   
+    
+
+ 
+
+
+  
+   
