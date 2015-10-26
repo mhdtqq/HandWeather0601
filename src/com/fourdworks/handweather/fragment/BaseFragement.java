@@ -1,5 +1,7 @@
 package com.fourdworks.handweather.fragment;
 
+import com.fourdworks.handweather.activity.BaseActivity;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -49,5 +51,14 @@ public abstract class BaseFragement extends Fragment {
 	 * 定义数据和控件发生关系的抽象方法
 	 */
 	protected abstract void bindView();
+	
+	
+	/**
+	 * 获取本碎片依赖的BaseActivity
+	 * @return
+	 */
+	public BaseActivity getAttachAct(){
+		return (BaseActivity)getActivity();
+	}
 
 }

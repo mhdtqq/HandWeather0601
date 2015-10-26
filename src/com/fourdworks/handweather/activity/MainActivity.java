@@ -128,7 +128,15 @@ public class MainActivity extends BaseActivity {
 				showMessage("再按一次，退出应用程序！");
 			}
 		}
-
+			
 		return true;
+	}
+	
+	/**
+	 * 跳到登录页面
+	 * @param view
+	 */
+	public void goLogin(View view){
+		jumpToActivity(LoginActivity.class);
 	}
 }

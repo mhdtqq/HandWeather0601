@@ -65,12 +65,12 @@ public abstract class BaseActivity extends FragmentActivity {
 
 	// 1.直接从当前Activity跳到其它Activity
 
-	protected void jumpToActivity(Class<?> cls) {
+	public void jumpToActivity(Class<?> cls) {
 		jumpToActivity(cls, null);
 	}
 	
 	// 2.直接从当前Activity跳到其它Activity,传递数据
-	protected void jumpToActivity(Class<?> cls, Serializable data) {
+	public void jumpToActivity(Class<?> cls, Serializable data) {
 		// 创建intent
 		Intent intent = new Intent(this, cls);
 		// 设置数据
@@ -81,13 +81,13 @@ public abstract class BaseActivity extends FragmentActivity {
 	}
 	
 	// 3.从当前Activity跳到其它Activity,并且需要回调
-	protected void jumpToActivityForResult(Class<?> cls,
+	public void jumpToActivityForResult(Class<?> cls,
 			int requestCode) {
 		jumpToActivityForResult(cls, null, requestCode);
 	}
 	
 	// 4.从当前Activity跳到其它Activity,传递数据，并且需要回调
-	protected void jumpToActivityForResult(Class<?> cls,
+	public void jumpToActivityForResult(Class<?> cls,
 			Serializable data, int requestCode) {
 		// 创建意图
 		Intent intent = new Intent(this, cls);
