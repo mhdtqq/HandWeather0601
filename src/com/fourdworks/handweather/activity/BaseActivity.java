@@ -104,7 +104,7 @@ public abstract class BaseActivity extends FragmentActivity {
 	 * 使用Toast提示
 	 * @param msg
 	 */
-	protected void showMessage(String msg){
+	public void showMessage(String msg){
 		//创建Toast对象
 		Toast toast = Toast.makeText(this, msg, 1000);
 //		//设置Toast相对于屏幕的位置

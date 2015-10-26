@@ -1,12 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.fourdworks.handweather"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="#ff0000ff" >
-	
-    <FrameLayout
-        android:layout_width="200dp"
-        android:layout_height="match_parent" >
-    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:background="#FF30323A"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff212730"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.fourdworks.handweather.view.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/head_default"
+                app:border_color="@color/red"
+                app:border_width="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:singleLine="true"
+                android:text="未登录"
+                android:textColor="#FFBEBEBE"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+             >
+			
+            <GridView
+                android:id="@+id/toolbars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3" >
+            </GridView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="V1.1"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/userset"
+                    android:text="设置"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
 
 </FrameLayout>

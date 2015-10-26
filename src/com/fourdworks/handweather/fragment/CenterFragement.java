@@ -3,16 +3,13 @@ package com.fourdworks.handweather.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -32,34 +29,36 @@ import com.fourdworks.handweather.activity.MainActivity;
 /**
  * 功能:中间页面碎片（天气） 作者:mike 时间：2015-10-21 上午10:40:14 修改:
  */
-public class CenterFragement extends Fragment {
+public class CenterFragement extends BaseFragement {
 	// 控件初始化
 	ViewPager myViewPager;
 	List<Fragment> homeListFragments;
 	List<ImageView> listTitleCursors;//标题对应游标集合
 	List<RelativeLayout> listTitles;//标题集合
 	
+	public CenterFragement() {
+		super(R.layout.frag_center);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
+	protected void initView() {
 		// TODO Auto-generated method stub
-		// 初始化本碎片的视图
-		View view = inflater.inflate(R.layout.frag_center, null);
-
 		// 初始化控件
-		myViewPager = (ViewPager) view.findViewById(R.id.myViewPager);
+		myViewPager = (ViewPager) mView.findViewById(R.id.myViewPager);
 		//初始化标题游标集合
 		listTitleCursors = new ArrayList<ImageView>();
-		listTitleCursors.add((ImageView) view.findViewById(R.id.title_cursor_1));
-		listTitleCursors.add((ImageView) view.findViewById(R.id.title_cursor_2));
-		listTitleCursors.add((ImageView) view.findViewById(R.id.title_cursor_3));
+		listTitleCursors.add((ImageView) mView.findViewById(R.id.title_cursor_1));
+		listTitleCursors.add((ImageView) mView.findViewById(R.id.title_cursor_2));
+		listTitleCursors.add((ImageView) mView.findViewById(R.id.title_cursor_3));
 		
-		
+			
 		//初始化标题集合
 		listTitles = new ArrayList<RelativeLayout>();
-		listTitles.add((RelativeLayout) view.findViewById(R.id.title_1));
-		listTitles.add((RelativeLayout) view.findViewById(R.id.title_2));
-		listTitles.add((RelativeLayout) view.findViewById(R.id.title_3));
+		listTitles.add((RelativeLayout) mView.findViewById(R.id.title_1));
+		listTitles.add((RelativeLayout) mView.findViewById(R.id.title_2));
+		listTitles.add((RelativeLayout) mView.findViewById(R.id.title_3));
 		
 		
 		// 初始化碎片集合(天气，新闻，娱乐)
@@ -67,6 +66,17 @@ public class CenterFragement extends Fragment {
 		homeListFragments.add(new WeatherFragement());
 		homeListFragments.add(new NewsFragement());
 		homeListFragments.add(new HappyFragement());
+	}
+
+	@Override
+	protected void initData() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void bindView() {
+		// TODO Auto-generated method stub
 		
 		// 将适配器设置到ViewPager
 		myViewPager.setAdapter(new MyViewPagerAdp(getFragmentManager()));
@@ -152,8 +162,6 @@ public class CenterFragement extends Fragment {
 				}
 			});
 		}
-
-		return view;
 	}
 
 	// myViewPager的碎片适配器----->三个碎片---->集合
@@ -201,5 +209,4 @@ public class CenterFragement extends Fragment {
 		}
 		
 	}
-
 }

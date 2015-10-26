@@ -5,4 +5,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!-- 快速工具栏 -->
+    <string name="toolbas_message">消息中心</string>
+    <string name="toolbas_rank">排行榜</string>
+    <string name="toolbas_collection">收藏</string>
+    <string name="toolbas_playhis">播放历史</string>
+    <string name="toolbas_vip">VIP会员</string>
+
 </resources>
