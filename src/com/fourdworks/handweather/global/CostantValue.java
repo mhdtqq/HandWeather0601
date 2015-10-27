@@ -14,4 +14,7 @@ public class CostantValue {
 	//程序退出的时间
 	public static final int APPEXITTIME = 2000;//2S
 	
+	//获取验证码的有效时间
+	public static final int GET_AUTOCODE_EFFECT_TIME = 30;
+	
 }

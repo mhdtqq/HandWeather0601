@@ -74,6 +74,7 @@ public class AppManager {
 	/**
 	 * 程序退出
 	 */
+	@SuppressWarnings("deprecation")
 	public void appExit() {
 		//1.杀掉所有的Activity
 		finishAllActivity();

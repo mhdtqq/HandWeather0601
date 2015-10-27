@@ -28,7 +28,7 @@ import android.widget.RelativeLayout;
 import android.widget.Scroller;
 
 import com.fourdworks.handweather.R;
-
+@SuppressWarnings("deprecation")
 public class SlidingMenu extends RelativeLayout {
 
 	private View mSlidingView;
@@ -55,6 +55,7 @@ public class SlidingMenu extends RelativeLayout {
 		init(context);
 	}
 
+	
 	private void init(Context context) {
 		
 		mContext = context;
@@ -94,7 +95,6 @@ public class SlidingMenu extends RelativeLayout {
 		addView(view, behindParams);
 		mMenuView = view;
 	}
-
 	public void setRightView(View view) {
 		LayoutParams behindParams = new LayoutParams(LayoutParams.WRAP_CONTENT,
 				LayoutParams.FILL_PARENT);
@@ -102,7 +102,7 @@ public class SlidingMenu extends RelativeLayout {
 		addView(view, behindParams);
 		mDetailView = view;
 	}
-
+	
 	public void setCenterView(View view) {
 		LayoutParams aboveParams = new LayoutParams(LayoutParams.FILL_PARENT,
 				LayoutParams.FILL_PARENT);

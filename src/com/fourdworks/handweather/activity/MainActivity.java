@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Toast;
 
 import com.fourdworks.handweather.AppManager;
 import com.fourdworks.handweather.R;

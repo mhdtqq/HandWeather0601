@@ -2,14 +2,13 @@ package com.fourdworks.handweather.activity;
 
 import java.io.Serializable;
 
-import com.fourdworks.handweather.AppManager;
-import com.fourdworks.handweather.global.CostantValue;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.Gravity;
 import android.widget.Toast;
+
+import com.fourdworks.handweather.AppManager;
+import com.fourdworks.handweather.global.CostantValue;
 
 //基类中执行共同代码，而子类实现各自不同的代码
 

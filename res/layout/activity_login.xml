@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg"
-    android:gravity="center" >
+    android:background="@drawable/login_bg" >
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/back_selector"
+        android:onClick="back" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:orientation="vertical"
         android:paddingLeft="20dp"
         android:paddingRight="20dp" >
@@ -55,36 +63,41 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp" >
 
-            <TextView
+            <Button
                 android:id="@+id/foget_pwd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+                android:onClick="getForgetPwd"
                 android:text="忘记密码？"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
-	
-            <TextView
+                android:textSize="18sp"
+                android:background="@null"
+                 />
+
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toLeftOf="@id/foget_pwd"
                 android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@id/foget_pwd"
+                android:background="@null"
+                android:onClick="toRegister"
                 android:text="注册"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </RelativeLayout>
-        	
+
         <!-- 微博登录 -->
-        <TextView 
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="微博登录"
-            android:drawableLeft="@drawable/weibo_icon"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
-            />
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/weibo_icon"
+            android:text="微博登录"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

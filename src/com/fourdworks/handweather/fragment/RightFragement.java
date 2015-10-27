@@ -13,7 +13,6 @@ import android.widget.SimpleAdapter;
 
 import com.fourdworks.handweather.R;
 import com.fourdworks.handweather.activity.BaseActivity;
-import com.fourdworks.handweather.activity.LoginActivity;
 
 /**
  * 功能:右侧面碎片（设置） 作者:mike 时间：2015-10-21 上午10:40:14 修改:
