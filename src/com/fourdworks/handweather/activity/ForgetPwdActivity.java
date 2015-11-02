@@ -23,6 +23,7 @@ public class ForgetPwdActivity extends BaseActivity {
 	int currentDJSTime;// 当前倒计时的时间
 	// 倒计时handler
 	Handler handler = new Handler() {
+		
 		public void handleMessage(Message msg) {
 			// ---------------
 			// 1.currentDJSTime< 1(计时结束)
@@ -62,9 +63,9 @@ public class ForgetPwdActivity extends BaseActivity {
 	@Override
 	protected void initData() {
 		// TODO Auto-generated method stub
-
+		
 	}
-
+	
 	@Override
 	protected void bindView() {
 		// TODO Auto-generated method stub

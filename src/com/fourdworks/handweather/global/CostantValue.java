@@ -17,4 +17,10 @@ public class CostantValue {
 	//获取验证码的有效时间
 	public static final int GET_AUTOCODE_EFFECT_TIME = 30;
 	
+	//本程序包路径
+	public static final String APPPACKAGENAME = "com.fourdworks.handweather";
+	
+	//是否打印Log日志
+	public static final boolean IS_ONLINE = false;
+	
 }
