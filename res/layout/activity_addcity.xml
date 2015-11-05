@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <com.fourdworks.handweather.view.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff004ABC"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/base_action_bar_back_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="添加城市"
+            android:textColor="@color/white"
+            android:textSize="23sp" />
+    </RelativeLayout>			
+    -->
+    <!-- 搜索框 -->
+
+    <include layout="@layout/part_searchbox" />
+    <!-- 城市搜索，热门城市 -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- 热门城市 -->
+
+        <LinearLayout
+            android:id="@+id/hotcity_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffF1F5F8"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <!-- 热门城市 Title -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门城市"
+                android:textColor="#FF808080"
+                android:textSize="20sp" />
+            <!-- 显示热门城市 -->
+
+            <GridView
+                android:id="@+id/hotcity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:numColumns="3"
+                android:verticalSpacing="20dp" >
+            </GridView>
+        </LinearLayout>
+
+        <!-- 城市搜索 -->
+
+        <RelativeLayout
+            android:id="@+id/seach_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone" >
+			
+            <ListView
+                android:id="@+id/search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_margin="5dp"
+                android:divider="#ffE8E8E8"
+                android:dividerHeight="1dp"
+                >
+            </ListView>
+
+            <!-- 空视图 -->
+
+            <ImageView
+                android:id="@+id/empty_view"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/biz_plugin_weather_selectcity_empty"
+                android:visibility="gone"
+                 />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

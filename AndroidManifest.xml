@@ -10,6 +10,34 @@
     <!-- 重启包的权限 -->
     <uses-permission android:name="android.permission.RESTART_PACKAGES" />
 
+    <!-- 定位相关权限 -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+
     <application
         android:name="com.fourdworks.handweather.MyApplaction"
         android:allowBackup="true"
@@ -21,11 +49,6 @@
             android:label="@string/app_name" >
         </activity>
         <activity android:name="com.fourdworks.handweather.activity.TestActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.fourdworks.handweather.activity.LoginActivity" >
         </activity>
@@ -33,6 +56,29 @@
         </activity>
         <activity android:name="com.fourdworks.handweather.activity.ForgetPwdActivity" >
         </activity>
+        <!-- 添加城市 -->
+        <activity
+            android:name="com.fourdworks.handweather.activity.AddActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 定位相关 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="0DAmzYZ3inQnaCZU3TU5NcMU" /> <!-- 申请的key值 -->
+
+
+        <!-- 定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
     </application>
 
 </manifest>
