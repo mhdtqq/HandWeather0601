@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
-    android:orientation="vertical" >
-    
-
-</LinearLayout>
+    android:background="@color/white" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        
+        <!-- 轮播视图 -->
+        <com.fourdworks.handweather.view.SlideShowView 
+            android:id="@+id/happy_advert"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+           />
+        
+        <!-- 三级标题（笑话/趣图） -->
+        
+        
+        
+        
+        <!-- 笑话和趣图的容器 -->
+        <FrameLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 列表项布局的根目录设置的宽高均无效 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <RelativeLayout
+        android:id="@+id/tag"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp" >
+
+        <!-- 是否删除 -->
+
+        <ImageButton
+            android:id="@+id/is_sure_deletecity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/city_delete"
+            android:visibility="gone" />
+
+        <!-- 城市名字 -->
+
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@id/is_sure_deletecity"
+            android:ems="5"
+            android:singleLine="true"
+            android:text="武汉"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <!-- 天气图标 -->
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/nb_na"
+            android:visibility="invisible" />
+        <!-- 天气信息/加载中 -->
+
+        <TextView
+            android:id="@+id/temprature_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toStartOf="@id/weather_icon"
+            android:singleLine="true"
+            android:text="加载中"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        <!-- 加载动画 -->
+
+        <ProgressBar
+            android:id="@+id/load_weather"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:indeterminateDrawable="@anim/data_loading" />
+
+        <!-- 删除图标 -->
+
+        <ImageButton
+            android:id="@+id/sure_deletecity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/temprature_range"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -11,5 +11,9 @@
     <string name="toolbas_collection">收藏</string>
     <string name="toolbas_playhis">播放历史</string>
     <string name="toolbas_vip">VIP会员</string>
+    
+    
+    <!-- 服务器相关 -->
+    <string name="server_error">服务器异常</string>
 
 </resources>
